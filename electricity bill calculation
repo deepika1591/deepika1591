@@ -1,0 +1,44 @@
+import java.lang.*;
+import java.util.*;
+
+public class Main{
+     public static void main(String[]args){
+         Scanner sc = new Scanner(System.in);
+         int N = sc.nextInt();
+        double billamount;
+        double surcharge;
+        int billintotal;
+        
+        if(N<=50){
+            billamount=0.5*N;
+            surcharge=0.2*billamount;
+            billintotal=(int)(billamount+surcharge);
+            System.out.print(billintotal);
+            }
+        else if(N<=150 && N>50){
+            billamount=(0.5*50)+(0.75*(N-50));
+            surcharge=0.2*billamount;
+            billintotal=(int)(billamount+surcharge);
+            System.out.print(billintotal); 
+         }   
+          else if(N<=250 && N>150){
+            billamount=(0.5*50)+(0.75*100)+(1.2*(N-150));
+            surcharge=0.2*billamount;
+            billintotal=(int)(billamount+surcharge);
+            System.out.print(billintotal);
+            }  
+             
+            else if(N>250){
+            billamount=(0.5*50)+(0.75*100)+(1.2*100)+(1.5*(N-250));
+            surcharge=0.2*billamount;
+            billintotal=(int)(billamount+surcharge);
+            System.out.print(billintotal);
+            } 
+            
+    
+    
+    
+    
+     }   
+    
+}
